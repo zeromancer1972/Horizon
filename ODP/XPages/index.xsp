@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:_layoutBS3 fullWidth="true" hideLeftColumn="true"
+		hideRightColumn="true" navbarTopInverse="true" hideHelpArea="true">
+		<xp:this.facets>
+			<xp:div xp:key="facetMiddle">
+				
+				<xp:div styleClass="row">
+					<xp:div styleClass="col-lg-8">
+						<xc:_widgetCalendar></xc:_widgetCalendar>
+					</xp:div>
+					<xp:div styleClass="col-lg-4">
+						<xc:_widgetToday></xc:_widgetToday>
+						<xc:_widgetQuick></xc:_widgetQuick>
+					</xp:div>
+				</xp:div>
+				
+				<xp:div styleClass="row">
+					<xp:div styleClass="col-lg-6">
+						
+					</xp:div>
+					<xp:div styleClass="col-lg-6">
+						
+					</xp:div>
+				</xp:div>
+				
+			</xp:div>
+			<xp:div xp:key="facetHelp">
+				<xc:_helpIndex></xc:_helpIndex>
+			</xp:div>
+		</xp:this.facets>
+	</xc:_layoutBS3>
+</xp:view>

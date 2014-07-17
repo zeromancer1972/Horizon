@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+			<xp:text tagName="span"
+				styleClass="#{javascript:compositeData.icon;}"
+				rendered="#{javascript:compositeData.icon!=null}">
+			</xp:text>
+			<xp:text rendered="#{javascript:compositeData.icon!=null}"
+				escape="false">
+				<xp:this.value><![CDATA[#{javascript:"&#160;"}]]></xp:this.value>
+			</xp:text>
+			<xp:text disableTheme="true" value="#{javascript:compositeData.title}">
+				</xp:text>
+			</h4>
+		</div>
+		<xp:div loaded="${javascript:!compositeData.hideBody}">
+			<xp:this.styleClass><![CDATA[#{javascript:return compositeData.hideBody ? "" : "panel-body"}]]></xp:this.styleClass>
+			<xp:callback facetName="body" id="callback3"
+				loaded="${javascript:!compositeData.hideBody}">
+			</xp:callback>
+		</xp:div>
+		<xp:div disableTheme="true" styleClass="panel-footer"
+			rendered="#{javascript:compositeData.footer}">
+			<xp:callback facetName="footer" id="callback2"></xp:callback>
+		</xp:div>
+	</div>
+</xp:view>

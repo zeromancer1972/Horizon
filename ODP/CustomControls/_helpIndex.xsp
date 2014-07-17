@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">EveX is a simple room and resource reservation tool for the&#160;SOHO usage. It goes much further than the application that comes with IBM Domino, e.g. it offers the possibility to create reservations durating &gt; 24h, catering information and a simple approval workflow.</xp:view>

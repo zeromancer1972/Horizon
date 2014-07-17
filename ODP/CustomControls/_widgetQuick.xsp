@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xc:ccPanel footer="false" hideBody="false" title="Quick Reservation"
+		icon="fa fa-paper-plane">
+		<xp:this.facets>
+			<xp:div xp:key="body">
+			<xc:_widgetQuickForm></xc:_widgetQuickForm>
+			</xp:div>
+		</xp:this.facets>
+	</xc:ccPanel>
+</xp:view>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<div id="confirmlogout" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">
+						x
+					</button>
+					<xp:text disableTheme="true" styleClass="modal-title"
+						tagName="h4">
+
+						<xp:this.value><![CDATA[#{javascript:"Logout"}]]></xp:this.value>
+					</xp:text>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-3">
+							<span class="fa fa-power-off bigicon"></span>
+						</div>
+						<div class="col-lg-9">
+							<h3>Do you really want to logout from this
+								application?</h3>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="row">
+						<div class="col-lg-6">
+							<button type="button" class="btn btn-block btn-danger"
+								data-dismiss="modal" onclick="doLogout()">
+								Yes, good bye!
+					</button>
+						</div>
+						<div class="col-lg-6">
+							<button type="button" class="btn btn-block btn-custom-green" data-dismiss="modal">
+								No, I don't!
+					</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</xp:view>

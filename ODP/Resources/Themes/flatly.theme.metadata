@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1a6" sequence="12" unid="69B667982A6059E6C1257D0D00028AE8">
+<created><datetime dst="true">20140706T022746,32+02</datetime></created>
+<modified><datetime dst="true">20140717T231024,36+02</datetime></modified>
+<revised><datetime dst="true">20140706T024353,99+02</datetime></revised>
+<lastaccessed><datetime dst="true">20140717T231024,36+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140717T231024,36+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
+<wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name="$Flags"><text>34567Cg~`</text></item>
+<item name="$TITLE" sign="true"><text>flatly.theme</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>flatly.theme</text></item>
+<item name="$CSSFiles"><textlist><text>flatly/bootstrap.css</text></textlist></item></note>

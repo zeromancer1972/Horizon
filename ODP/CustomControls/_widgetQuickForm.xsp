@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.data>
+		<xp:dominoDocument var="event" formName="event"></xp:dominoDocument>
+	</xp:this.data>
+	<div class="form-group">
+		<label for="">Title</label>
+		<xp:inputText id="inputText1" value="#{event.eventTitle}">
+		</xp:inputText>
+	</div>
+	<div class="form-group">
+
+		<div class="row">
+			<div class="col-xs-3">
+				<label for="">Start Date</label>
+				<xp:inputText id="inputText2"
+					value="#{event.eventStartDate}"
+					defaultValue="#{javascript:@Now();}">
+					<xp:this.converter>
+						<xp:convertDateTime pattern="MM/dd/yyyy">
+						</xp:convertDateTime>
+					</xp:this.converter>
+					<xp:eventHandler event="onblur" submit="true"
+						refreshMode="partial" refreshId="resources">
+					</xp:eventHandler>
+				</xp:inputText>
+			</div>
+			<div class="col-xs-3">
+				<label for="">Start Time</label>
+				<xp:inputText id="inputText3" value="#{event.eventStartTime}"
+					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,30,0);}">
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="short"></xp:convertDateTime>
+					</xp:this.converter>
+					<xp:eventHandler event="onblur" submit="true"
+						refreshMode="partial" refreshId="resources">
+					</xp:eventHandler>
+					</xp:inputText>
+			</div>
+			<div class="col-xs-3">
+				<label for="">End Date</label>
+				<xp:inputText id="inputText4" value="#{event.eventEndDate}"
+					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,90,0);}">
+					<xp:this.converter>
+						<xp:convertDateTime pattern="MM/dd/yyyy">
+						</xp:convertDateTime>
+					</xp:this.converter>
+					<xp:eventHandler event="onblur" submit="true"
+						refreshMode="partial" refreshId="resources">
+					</xp:eventHandler></xp:inputText>
+			</div>
+			<div class="col-xs-3">
+				<label for="">End Time</label>
+				<xp:inputText id="inputText5" value="#{event.eventEndTime}"
+					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,90,0);}">
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="short"></xp:convertDateTime>
+					</xp:this.converter>
+					<xp:eventHandler event="onblur" submit="true"
+						refreshMode="partial" refreshId="resources">
+					</xp:eventHandler></xp:inputText>
+			</div>
+		</div>
+	</div>
+	<xp:div id="resources">
+		<div class="form-group" id="roomSelector">
+			<label for="">Room</label>
+			<xp:comboBox id="comboBox1">
+				<xp:selectItems>
+					<xp:this.value><![CDATA[#{javascript:finder.setResType("room");
+finder.setDoc(event.getDocument(true));
+return finder.getRooms();}]]></xp:this.value>
+				</xp:selectItems>
+			</xp:comboBox>
+		</div>
+		<div class="form-group" id="resourceSelector">
+			<label for="">Resource</label>
+			<xp:comboBox id="comboBox2">
+				<xp:selectItems>
+					<xp:this.value><![CDATA[#{javascript:finder.setResType("resources");
+finder.setDoc(event.getDocument(true));
+return finder.getResources();}]]></xp:this.value>
+				</xp:selectItems>
+			</xp:comboBox>
+		</div>
+	</xp:div>
+	<xp:eventHandler event="onClientLoad" submit="true"
+		refreshMode="partial" refreshId="resources">
+	</xp:eventHandler></xp:view>

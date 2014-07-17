@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:ccPanel footer="false" hideBody="false" title="Today"
+		icon="fa fa-fire">
+		<xp:this.facets>
+			<xp:div xp:key="body">
+				<xp:repeat id="repeat1" rows="5" var="event">
+					<xp:this.value><![CDATA[#{javascript:var events = new org.openntf.evex.Events();
+return events.getToday();}]]></xp:this.value>
+
+					<xp:link escape="true" id="link1"
+						styleClass="badge">
+						<xp:this.text><![CDATA[#{javascript:event.get("title");}]]></xp:this.text>
+					</xp:link>
+					&#160;
+				</xp:repeat>
+			</xp:div>
+		</xp:this.facets>
+	</xc:ccPanel>
+
+</xp:view>

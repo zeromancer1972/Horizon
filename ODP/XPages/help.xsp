@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:_layoutBS3 fullWidth="true" hideLeftColumn="true"
+		hideRightColumn="true" navbarTopInverse="true" hideHelpArea="true">
+	</xc:_layoutBS3></xp:view>

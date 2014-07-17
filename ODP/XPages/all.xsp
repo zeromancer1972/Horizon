@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:_layoutBS3 navbarTopInverse="true" navbarBottomInverse="true"
+		hideHelpArea="false" fullWidth="false" hideLeftColumn="true"
+		hideRightColumn="true">
+		<xp:this.facets>
+			<xp:div xp:key="facetMiddle">
+				<xp:viewPanel rows="30" id="viewPanel1"
+					viewStyle="width:100%">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="view1" viewName="all"></xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="form" id="viewColumn1">
+						<xp:viewColumnHeader value="Form"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn2" columnName="$0">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader2" value="Created">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn3" columnName="$1">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader3" value="Modified">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+				</xp:viewPanel>
+			</xp:div>
+		</xp:this.facets>
+	</xc:_layoutBS3></xp:view>

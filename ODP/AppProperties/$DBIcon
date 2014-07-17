@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.1'
+ replicaid='C1257D0F003C1A86'>
+<noteinfo noteid='1ba' unid='2B605FBCFF3CC205C1257CD80071E22C' sequence='6'>
+<created><datetime dst='true'>20140514T224354,68+02</datetime></created>
+<modified><datetime dst='true'>20140717T231025,54+02</datetime></modified>
+<revised><datetime dst='true'>20140708T182652,82+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20140717T231025,54+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20140717T231025,54+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
+<wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>1059</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAIAAAAAACMEAAABAAAAAQAAAAAAAAB8
+AC0EAAAjBCQEiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhk
+iAAAAAlwSFlzAAALEwAACxMBAJqcGAAAA8VJREFUWIXFVltsFFUY/s7M7FRstkt3Z6uU2kUgQgXT
+Vku8oViFRowJIRgvhBijxTTBvvhAFC9NqBFTw4O+aBQjtYbaBMIbXsAolZAYG7wQioAthS3drrsb
+t1122Z2dnt+HpcNMdzq7s1r4nuY//+X7zn/+nDPADQYzGtXLV/lklt3BwHxzQ0fj85j6zuDg4OXp
+Fcnolpn2IWNss12JO+uWgYFhvqcCIxeDiMZiyGY1EBEYY+Cc22QzJEkuB9BuKYCB7pvRlDz4vJWQ
+5TKU3zwP6UwaT65vwaWxccRiMYQjEQyfv2CbLzA8YLLNAkm0zb6KVDKJoeERBGprEf47guDoKO5u
+bChIDgDgzMRh2m7Tg83p2D/xsmJEGOH3K/B5vfjzzNmCsTXVCxI/HTlUYSng2x/7QyC61akAJxAE
+4dy6NQ/dMW2bZqCxoT4j5Of8ryAgZRI0x3wFccMFSIUCJhMJDJ8fgeL1oqZmYVFFL42FEIlGUenx
+IBCotY2dtQPpTAbdPfuwYdOz2NrWjp59XxVFHp+YRGvbK9ja1o49e3sKxlt2IB6fwObnX0IkGsXS
+JYvx1+XhosiJCO917UYymSocfBWWHaiocGPlijp8/ulHaN/WVnSxQ998h+9/OIotzz1dsgAGAIIg
+oGtXJ1auqCu60FhoHF27P0BjQz3WPLzaLtR095gEcE0r6RWcmuLo2PkuAKDjzdfA2Ozviaaq1bML
+4NzxNQwAX/b24bff/8CO7a9iYfUC21giKjfapiEkzkFEM1OMyXkFz5w9h48/+QxPPN6ClnWPgYiu
+xZFFzozmmARcSSWFrJoxBaRTuYnOqiqSiUmTL5NR8VZHJ6oUH7a9/KLuv5LM/W9oWjYvZ0rTTF3X
+BRCReCEYdHQz7tn7BUYuBvHMUxvxy4lf9fVQaBwAEA6HcfTYcdziV7B8We79oRmb1o2hoSGfJMtO
++PHzQI60b/9BS//JU6dx8tRprH30EbyxPSdAkiRxYGDA1dTUlDUJkCRJccQOoPPt15FV1bz14OgY
+du56H/euugetL2yB2+02+RVFUQCETAK4IPidvkyB22ps/W63G0uXLM5b56JYNS1A5xQ49zvkLxmi
+gUsXQIw5PoJSwRmrmv7Wj4AxZtmBxvq7cKC3G2UOBvT2RQEc6O2GLLusA4jyBRCR3+oKdblc8FbO
+L5ocAERRtM0xblY/AkZ03Y6ADB24NgOCcN2GEFYzAKKv4xMTqwVBuGkuuYko4fF4juhajM7+/v4+
+APdzzmeZnv9MrgI43Nzc3DoX9UvCv7fqTYzMngLJAAAAAElFTkSuQmCCAA==
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/png</text></item>
+<item name='$FileModDT' sign='true'><datetime dst='true'>20140708T182638,59+02</datetime></item>
+<item name='$ImageNames' sign='true'><text>C:\Users\Oliver\Desktop\tmp\1404854791_Calendar.png</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

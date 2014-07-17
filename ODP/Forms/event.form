@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.1'
+ replicaid='C1257D0F003C1A86'>
+<noteinfo noteid='466' unid='5E559E5CCFA9B773C1257D10006B039D' sequence='5'>
+<created><datetime dst='true'>20140709T212852,77+02</datetime></created>
+<modified><datetime dst='true'>20140717T231024,30+02</datetime></modified>
+<revised><datetime dst='true'>20140717T184238,68+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20140717T231024,30+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20140717T231024,30+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
+<wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>event</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>event</text></item>
+<item name='eventTitle' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='eventClass' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='eventStart' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='eventEnd' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='eventStartDate' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='eventStartTime' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='eventEndDate' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='eventEndTime' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>eventEndTime</text><text>eventEndDate</text><text
+>eventStartTime</text><text>eventStartDate</text><text>eventEnd</text><text
+>eventStart</text><text>eventClass</text><text>eventTitle</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/LgCKAAAFADACAAAAAAAAAgEAAAoAAAAAAAAAAAoAAAAAAGV2
+ZW50VGl0bGViDgEAhAAAAAAAAAAAAN4GAACK/4X/CAABAAAKgQKDBAEAhf8IAAEAAArdBgAAiv/+
+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/LgCKAAAFADACAAAAAAAAAgEAAAoAAAAAAAAAAAoAAAAA
+AGV2ZW50Q2xhc3NiDgEAhAAAAAAAAAAAAN4GAACK/4X/CAABAAAKgQKDBAEAhf8IAAEAAArdBgAA
+iv/+/1QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAABMgAMAAAAA
+AAECAgIBAQEBBwQCAAAAAAAAAAAAAAAAACAuLjqK/y4AigAABAAwAgAAAAABAAIBAAAKAAAAAAAA
+AAAKAAAAAABldmVudFN0YXJ03gYAAIr/hf8IAAEAAArdBgAAiv/+/1QAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAABIgAMAAAAAAAECAgIBAQEBBwQCAAAAAAAAAAAA
+AAAAACAuLjqK/zIAigAABAAwAgAAAAABAAABAAAKAAAAAAAAAAAOAAAAAABldmVudFN0YXJ0RGF0
+Zd4GAACK/4X/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAeAB4AAAAAAAARIADAAAAAAABAgICAQEBAQcEAgAAAAAAAAAAAAAAAAAgLi46iv8yAIoAAAQA
+MAIAAAAAAQABAQAACgAAAAAAAAAADgAAAAAAZXZlbnRTdGFydFRpbWXeBgAAiv+F/wgAAQAACoEC
+gwQBAIX/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+eAB4AAAAAAAATIADAAAAAAABAgICAQEBAQcEAgAAAAAAAAAAAAAAAAAgLi46iv8sAIoAAAQAMAIA
+AAAAAQACAQAACgAAAAAAAAAACAAAAAAAZXZlbnRFbmTeBgAAiv+F/wgAAQAACt0GAACK//7/VAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAeAAAAAAAAEiAAwAAAAAAAQICAgEB
+AQEHBAIAAAAAAAAAAAAAAAAAIC4uOor/MACKAAAEADACAAAAAAEAAAEAAAoAAAAAAAAAAAwAAAAA
+AGV2ZW50RW5kRGF0Zd4GAACK/4X/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAARIADAAAAAAABAgICAQEBAQcEAgAAAAAAAAAAAAAAAAAg
+Li46iv8wAIoAAAQAMAIAAAAAAQABAQAACgAAAAAAAAAADAAAAAAAZXZlbnRFbmRUaW1l3gYAAIr/
+hf8IAAEAAAqBAoMEAQCF/wgAAQAACoECgwQBAIX/CAABAAAK
+</rawitemdata></item></note>
+

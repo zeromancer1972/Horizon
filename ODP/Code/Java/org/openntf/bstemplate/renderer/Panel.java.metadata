@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="226" sequence="60" unid="B54C306AEBE981D9C1257CCA00580C51">
+<created><datetime dst="true">20140430T180143,21+02</datetime></created>
+<modified><datetime dst="true">20140717T231024,98+02</datetime></modified>
+<revised><datetime dst="true">20140706T024427,56+02</datetime></revised>
+<lastaccessed><datetime dst="true">20140717T231024,98+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140717T231024,98+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
+<wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>org/openntf/bstemplate/renderer/Panel.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>org/openntf/bstemplate/renderer/Panel.java</text></item>
+
+
+</note>

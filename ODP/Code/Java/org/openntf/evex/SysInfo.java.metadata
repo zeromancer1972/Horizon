@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="45a" sequence="16" unid="887FE646E52CAB1CC1257D10006894D9">
+<created><datetime dst="true">20140709T210218,49+02</datetime></created>
+<modified><datetime dst="true">20140717T231025,08+02</datetime></modified>
+<revised><datetime dst="true">20140709T210621,65+02</datetime></revised>
+<lastaccessed><datetime dst="true">20140717T231025,08+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140717T231025,08+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
+<wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>org/openntf/evex/SysInfo.java</text></item>
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>org/openntf/evex/SysInfo.java</text></item>
+
+</note>
