@@ -2,38 +2,17 @@
 
 $(document).ready( function() {
 	$(".longpress").longPress();
+/*
+	$(".datepicker").datetimepicker( {
+		pickTime : false
+	});
+	$(".timepicker").datetimepicker( {
+		pickDate : false
+	});
+*/
 });
 
-var doLogoutDialog = function() {
-	$("#confirmlogout").modal( {
-		backdrop : "static"
-	});
-}
 
-var doLogout = function() {
-	require( [ "dojo/cookie" ], function(cookie) {
-		if (cookie("DomAuthSessId")) {
-			cookie("DomAuthSessId", null, {
-				path : "/",
-				expires : "Thu, 01 Jan 1970 00:00:00 GMT"
-			});
-		}
-		if (cookie("LtpaToken")) {
-			cookie("LtpaToken", null, {
-				path : "/",
-				expires : "Thu, 01 Jan 1970 00:00:00 GMT"
-			});
-		}
-		if (cookie("LtpaToken2")) {
-			cookie("LtpaToken2", null, {
-				path : "/",
-				expires : "Thu, 01 Jan 1970 00:00:00 GMT"
-			});
-		}
-
-		location.reload();
-	})
-}
 
 function createCookie(name, value, days) {
 	if (days) {
@@ -74,7 +53,8 @@ function eraseCookie(name) {
  * to dateFormat.masks.default.
  */
 
-var dateFormat = function() {
+
+var dateformat = function() {
 	var token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g, timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g, timezoneClip = /[^-+\dA-Z]/g, pad = function(
 			val, len) {
 		val = String(val);
@@ -86,7 +66,7 @@ var dateFormat = function() {
 
 	// Regexes and supporting functions are cached through closure
 	return function(date, mask, utc) {
-		var dF = dateFormat;
+		var dF = dateformat;
 
 		// You can't provide utc if you skip other args (use the "UTC:" mask
 		// prefix)
@@ -156,7 +136,7 @@ var dateFormat = function() {
 }();
 
 // Some common format strings
-dateFormat.masks = {
+dateformat.masks = {
 	"default" : "ddd mmm dd yyyy HH:MM:ss",
 	shortDate : "m/d/yy",
 	mediumDate : "mmm d, yyyy",
@@ -172,7 +152,7 @@ dateFormat.masks = {
 };
 
 // Internationalization strings
-dateFormat.i18n = {
+dateformat.i18n = {
 	dayNames : [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sunday",
 			"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
 	monthNames : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
@@ -183,5 +163,6 @@ dateFormat.i18n = {
 
 // For convenience...
 Date.prototype.format = function(mask, utc) {
-	return dateFormat(this, mask, utc);
+	return dateformat(this, mask, utc);
 };
+

@@ -25,10 +25,10 @@ public class Events {
 	public Events() {
 		ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
 		try {
-			this.from = context.getRequestParameterMap().get("from").toString();
-			this.to = context.getRequestParameterMap().get("to").toString();
+			this.from = context.getRequestParameterMap().get("from") != null ? context.getRequestParameterMap().get("from").toString() : "";
+			this.to = context.getRequestParameterMap().get("to") != null ? context.getRequestParameterMap().get("to").toString() : "";
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 	}
 
@@ -37,27 +37,34 @@ public class Events {
 		ArrayList<HashMap<String, Object>> dataMap = new ArrayList<HashMap<String, Object>>();
 
 		// Search all docs in the range
-		Long lFrom = Long.valueOf(from).longValue();
-		Long lTo = Long.valueOf(to);
+		Long lFrom = 0L;
+		Long lTo = 0L;
+		if (!from.equals("") && !to.equals("")) {
+			lFrom = Long.valueOf(from).longValue();
+			lTo = Long.valueOf(to);
+		}
 		Date from = new Date(lFrom.longValue());
 		Date to = new Date(lTo.longValue());
 
 		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-
 		String searchString = "SELECT Form=\"event\" & (eventStart => [" + formatter.format(from) + "] | eventStart <= [" + formatter.format(to) + "])";
-
 		DocumentCollection col = XSPUtil.getCurrentDatabase().search(searchString);
+		HashMap valueMap;
 
 		for (Document doc : col) {
-			for (int i = 0; i < doc.getItemValueDateTimeArray("eventStart").size(); i++) {
-				HashMap valueMap = new HashMap<String, Object>();
-				valueMap.put("title", doc.getItemValueString("eventTitle"));
-				valueMap.put("id", doc.getUniversalID());
-				valueMap.put("class", doc.getItemValueString("eventClass"));
-				valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(i)).toJavaDate().getTime());
-				valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(i)).toJavaDate().getTime());
-				valueMap.put("url", "event.xsp?documentId="+doc.getUniversalID());
-				dataMap.add(valueMap);
+			try {
+				for (int i = 0; i < doc.getItemValueDateTimeArray("eventStart").size(); i++) {
+					valueMap = new HashMap<String, Object>();
+					valueMap.put("title", doc.getItemValueString("eventTitle"));
+					valueMap.put("id", doc.getUniversalID());
+					valueMap.put("class", doc.getItemValueString("eventClass"));
+					valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(i)).toJavaDate().getTime());
+					valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(i)).toJavaDate().getTime());
+					valueMap.put("url", "event.xsp?documentId=" + doc.getUniversalID());
+					dataMap.add(valueMap);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
 		}
@@ -100,7 +107,7 @@ public class Events {
 				valueMap.put("class", doc.getItemValueString("eventClass"));
 				valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(i)).toJavaDate().getTime());
 				valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(i)).toJavaDate().getTime());
-				valueMap.put("url", "event.xsp?documentId="+doc.getUniversalID());
+				valueMap.put("url", "event.xsp?documentId=" + doc.getUniversalID());
 				dataMap.add(valueMap);
 			}
 
@@ -144,7 +151,7 @@ public class Events {
 				valueMap.put("class", doc.getItemValueString("eventClass"));
 				valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(i)).toJavaDate().getTime());
 				valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(i)).toJavaDate().getTime());
-				valueMap.put("url", "event.xsp?documentId="+doc.getUniversalID());
+				valueMap.put("url", "event.xsp?documentId=" + doc.getUniversalID());
 				dataMap.add(valueMap);
 			}
 
@@ -200,7 +207,7 @@ public class Events {
 				DateTime eventStart = (DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(0);
 				DateTime eventEnd = (DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(0);
 
-				if (eventStart.toJavaDate().before(Helper.getTodayStartDate()) && eventEnd.toJavaDate().after(Helper.getTodayEndDate())) {
+				if (eventStart.toJavaDate().before(Helper.getTodayStartEnd().getTime()) && eventEnd.toJavaDate().after(Helper.getTodayEndBegin().getTime())) {
 					HashMap valueMap = new HashMap<String, Object>();
 					valueMap.put("title", doc.getItemValueString("eventTitle"));
 					valueMap.put("id", doc.getUniversalID());

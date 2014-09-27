@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom"
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
 	xmlns:xe="http://www.ibm.com/xsp/coreex">
 	<xp:this.beforePageLoad><![CDATA[#{javascript:var url = facesContext.getExternalContext().getRequest().getRequestURI();
 if(url.indexOf(".xsp")==-1){
@@ -25,8 +24,7 @@ if(url.indexOf(".xsp")==-1){
 			class="#{javascript:compositeData.fullWidth?'container-fluid':'container'}">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle"
-					data-toggle="collapse"
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -36,37 +34,29 @@ if(url.indexOf(".xsp")==-1){
 				<a class="navbar-brand" href="index.xsp">
 					<span class="glyphicon glyphicon-calendar"></span>
 					&#160;
-					<xp:text disableTheme="true"
-						value="#{javascript:@DbTitle()}">
+					<xp:text disableTheme="true" value="#{javascript:@DbTitle()}">
 					</xp:text>
 				</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 
 				</ul>
 
-				<xp:panel tagName="ul" id="usermenu"
-					styleClass="nav navbar-nav navbar-right">
+				<xp:panel tagName="ul" id="usermenu" styleClass="nav navbar-nav navbar-right">
 
-					<xp:repeat id="repeat1" rows="30"
-						disableOutputTag="true"
+					<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
 						value="#{javascript:navigation.navigation}" var="nav">
-						<xp:panel tagName="li"
-							rendered="#{javascript:nav.visible}">
+						<xp:panel tagName="li" rendered="#{javascript:nav.visible}">
 							<xp:this.styleClass><![CDATA[#{javascript:view.getPageName().indexOf(nav.getUrl())!=-1 ? "active" : ""}]]></xp:this.styleClass>
 
-							<a href="#{javascript:nav.getUrl()}"
-								target="#{javascript:nav.isNewWindow()?'_blank':''}">
-								<span
-									class="#{javascript:nav.getIcon()}">
+							<a href="#{javascript:nav.getUrl()}" target="#{javascript:nav.isNewWindow()?'_blank':''}">
+								<span class="#{javascript:nav.getIcon()}">
 								</span>
 								&#160;
-								<xp:text escape="true"
-									id="computedField1" disableTheme="true"
+								<xp:text escape="true" id="computedField1" disableTheme="true"
 									value="#{javascript:nav.getLabel()}">
 								</xp:text>
 							</a>
@@ -74,12 +64,10 @@ if(url.indexOf(".xsp")==-1){
 					</xp:repeat>
 
 					<li class="dropdown">
-						<xp:link disableTheme="true" value="#"
-							styleClass="dropdown-toggle">
+						<xp:link disableTheme="true" value="#" styleClass="dropdown-toggle">
 
 							<xp:this.attrs>
-								<xp:attr name="data-toggle"
-									value="dropdown">
+								<xp:attr name="data-toggle" value="dropdown">
 
 								</xp:attr>
 							</xp:this.attrs>
@@ -98,8 +86,7 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 								<xp:this.rendered><![CDATA[#{javascript:@ClientType().equals("Web")}]]></xp:this.rendered>
 								<xp:link
 									value="#{javascript:@UserName().equals('Anonymous')?'/login.xsp':'javascript:doLogoutDialog()'}">
-									<span
-										class="glyphicon glyphicon-user">
+									<span class="glyphicon glyphicon-user">
 									</span>
 									&#160;
 									<xp:text>
@@ -110,14 +97,12 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 
 							<xp:panel tagName="li">
 								<xp:this.rendered><![CDATA[#{javascript:!@UserName().equals("Anonymous")}]]></xp:this.rendered>
-								<xp:link disableTheme="true" id="link5"
-									value="/profile.xsp">
-									<span
-										class="fa fa-cog fa-spin">
+								<xp:link disableTheme="true" id="link5" value="/profile.xsp">
+									<span class="fa fa-cog fa-spin">
 									</span>
 									&#160;Settings
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete" immediate="true">
+									<xp:eventHandler event="onclick" submit="true"
+										refreshMode="complete" immediate="true">
 									</xp:eventHandler>
 								</xp:link>
 							</xp:panel>
@@ -140,8 +125,7 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 			<xp:callback facetName="facetHelp" id="facetHelp"></xp:callback>
 		</div>
 	</xp:div>
-	<xp:div style="padding-top:70px;"
-		rendered="#{javascript:compositeData.hideHelpArea}">
+	<xp:div style="padding-top:70px;" rendered="#{javascript:compositeData.hideHelpArea}">
 	</xp:div>
 	<!-- main content -->
 	<div id="content"
@@ -151,11 +135,9 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 		<xp:div>
 			<xp:this.styleClass><![CDATA[#{javascript:compositeData.hideLeftColumn && compositeData.hideRightColumn ? '':'col-lg-9'}]]></xp:this.styleClass>
 			<xp:panel tagName="h1" disableTheme="true"
-				rendered="#{javascript:compositeData.pageTitle!=null}"
-				style="padding:0;margin:0">
+				rendered="#{javascript:compositeData.pageTitle!=null}" style="padding:0;margin:0">
 
-				<xp:text escape="false" id="computedField3"
-					disableTheme="true"
+				<xp:text escape="false" id="computedField3" disableTheme="true"
 					value="#{javascript:compositeData.pageTitle}">
 				</xp:text>
 			</xp:panel>
@@ -181,16 +163,13 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 		<div
 			class="#{javascript:compositeData.fullWidth?'container-fluid':'container'}">
 			<ul class="nav navbar-nav" style="margin-left:-14px">
-				<xp:repeat id="repeat2" rows="30"
-					disableOutputTag="true" value="#{javascript:footer.navigation}"
-					var="nav">
-					<xp:panel tagName="li"
-						rendered="#{javascript:nav.visible}">
+				<xp:repeat id="repeat2" rows="30" disableOutputTag="true"
+					value="#{javascript:footer.navigation}" var="nav">
+					<xp:panel tagName="li" rendered="#{javascript:nav.visible}">
 						<xp:this.styleClass><![CDATA[#{javascript:view.getPageName().indexOf(nav.getUrl())!=-1 ? "active" : ""}]]></xp:this.styleClass>
-						<a href="#{javascript:nav.getUrl()}"
-							target="#{javascript:nav.isNewWindow()?'_blank':''}">
-							<xp:text escape="true" id="computedField2"
-								disableTheme="true" value="#{javascript:nav.getLabel()}">
+						<a href="#{javascript:nav.getUrl()}" target="#{javascript:nav.isNewWindow()?'_blank':''}">
+							<xp:text escape="true" id="computedField2" disableTheme="true"
+								value="#{javascript:nav.getLabel()}">
 							</xp:text>
 						</a>
 					</xp:panel>
@@ -201,8 +180,7 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 					<xp:link escape="true" id="link1">
 
 						<xp:this.attrs>
-							<xp:attr name="data-target"
-								value="#aboutbox">
+							<xp:attr name="data-target" value="#aboutbox">
 							</xp:attr>
 							<xp:attr name="data-toggle" value="modal">
 							</xp:attr>
@@ -216,5 +194,15 @@ var uploadtext = (uploads>0)?" ("+uploads.toString()+" uploads)":"";
 	<xc:ccAboutbox></xc:ccAboutbox>
 	<xc:ccDialogLogout></xc:ccDialogLogout>
 	<xe:keepSessionAlive id="keepSessionAlive1"></xe:keepSessionAlive>
+	<xp:scriptBlock id="scriptBlock1" type="text/javascript">
 
+		<xp:this.value><![CDATA[$(document).ready(function(){
+	$(".datepicker").datetimepicker( {
+		pickTime : false
+	});
+	$(".timepicker").datetimepicker( {
+		pickDate : false
+	});
+});]]></xp:this.value>
+	</xp:scriptBlock>
 </xp:view>

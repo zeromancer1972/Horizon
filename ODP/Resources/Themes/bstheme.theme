@@ -43,6 +43,25 @@
 		<href>long-press-master/css/normalize.css</href>
 	</resource>
 	<!-- longpress end -->
+	
+	
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>dtpicker/moment/min/moment.min.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>dtpicker/moment/min/locales.min.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>dtpicker/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>dtpicker/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css</href>
+	</resource>
+	
 
 	<resource>
 		<content-type>application/x-javascript</content-type>

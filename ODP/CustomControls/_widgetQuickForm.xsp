@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:eventHandler event="onClientLoad" submit="true"
+		refreshMode="partial" refreshId="resources">
+	</xp:eventHandler>
 	<xp:this.data>
 		<xp:dominoDocument var="event" formName="event"></xp:dominoDocument>
 	</xp:this.data>
@@ -9,17 +12,20 @@
 		</xp:inputText>
 	</div>
 	<div class="form-group">
-
 		<div class="row">
 			<div class="col-xs-3">
 				<label for="">Start Date</label>
 				<xp:inputText id="inputText2"
 					value="#{event.eventStartDate}"
-					defaultValue="#{javascript:@Now();}">
+					defaultValue="#{javascript:@Now();}"
+					styleClass="form-control datepicker" disableTheme="true">
 					<xp:this.converter>
 						<xp:convertDateTime pattern="MM/dd/yyyy">
 						</xp:convertDateTime>
 					</xp:this.converter>
+					<xp:this.attrs>
+						<xp:attr name="dateFormat" value="mm/dd/yyyy"></xp:attr>
+					</xp:this.attrs>
 					<xp:eventHandler event="onblur" submit="true"
 						refreshMode="partial" refreshId="resources">
 					</xp:eventHandler>
@@ -28,37 +34,42 @@
 			<div class="col-xs-3">
 				<label for="">Start Time</label>
 				<xp:inputText id="inputText3" value="#{event.eventStartTime}"
-					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,30,0);}">
+					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,30,0);}" styleClass="timepicker form-control" disableTheme="true">
 					<xp:this.converter>
 						<xp:convertDateTime type="time" timeStyle="short"></xp:convertDateTime>
 					</xp:this.converter>
 					<xp:eventHandler event="onblur" submit="true"
 						refreshMode="partial" refreshId="resources">
 					</xp:eventHandler>
-					</xp:inputText>
+				</xp:inputText>
 			</div>
 			<div class="col-xs-3">
 				<label for="">End Date</label>
 				<xp:inputText id="inputText4" value="#{event.eventEndDate}"
-					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,90,0);}">
+					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,90,0);}" styleClass="datepicker form-control" disableTheme="true">
 					<xp:this.converter>
 						<xp:convertDateTime pattern="MM/dd/yyyy">
 						</xp:convertDateTime>
 					</xp:this.converter>
 					<xp:eventHandler event="onblur" submit="true"
 						refreshMode="partial" refreshId="resources">
-					</xp:eventHandler></xp:inputText>
+					</xp:eventHandler>
+					<xp:this.attrs>
+						<xp:attr name="dateFormat" value="mm/dd/yyyy"></xp:attr>
+					</xp:this.attrs>
+				</xp:inputText>
 			</div>
 			<div class="col-xs-3">
 				<label for="">End Time</label>
 				<xp:inputText id="inputText5" value="#{event.eventEndTime}"
-					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,90,0);}">
+					defaultValue="#{javascript:@Adjust(@Now(), 0,0,0,0,90,0);}" styleClass="timepicker form-control" disableTheme="true">
 					<xp:this.converter>
 						<xp:convertDateTime type="time" timeStyle="short"></xp:convertDateTime>
 					</xp:this.converter>
 					<xp:eventHandler event="onblur" submit="true"
 						refreshMode="partial" refreshId="resources">
-					</xp:eventHandler></xp:inputText>
+					</xp:eventHandler>
+				</xp:inputText>
 			</div>
 		</div>
 	</div>
@@ -84,6 +95,15 @@ return finder.getResources();}]]></xp:this.value>
 			</xp:comboBox>
 		</div>
 	</xp:div>
-	<xp:eventHandler event="onClientLoad" submit="true"
-		refreshMode="partial" refreshId="resources">
-	</xp:eventHandler></xp:view>
+	<xp:div>
+	<xp:link escape="true" text="Please login to create a reservation"
+		id="link1" value="/login.xsp" styleClass="btn btn-default">
+		<xp:this.rendered><![CDATA[#{javascript:@UserName().equals("Anonymous")}]]></xp:this.rendered>
+	</xp:link>
+	<xp:link escape="true" text="Create reservation" id="link2"
+		styleClass="btn btn-success">
+		<xp:this.rendered><![CDATA[#{javascript:!@UserName().equals("Anonymous")}]]></xp:this.rendered>
+	</xp:link>
+	</xp:div>
+
+</xp:view>

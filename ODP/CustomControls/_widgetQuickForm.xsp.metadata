@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="4aa" sequence="142" unid="6D80F2DD9C0493B3C1257D18005B1139">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.2" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4aa" sequence="170" unid="6D80F2DD9C0493B3C1257D18005B1139">
 <created><datetime dst="true">20140717T183441,85+02</datetime></created>
-<modified><datetime dst="true">20140717T231025,76+02</datetime></modified>
-<revised><datetime dst="true">20140717T225552,65+02</datetime></revised>
-<lastaccessed><datetime dst="true">20140717T231025,76+02</datetime></lastaccessed>
+<modified><datetime dst="true">20140926T194512,14+02</datetime></modified>
+<revised><datetime dst="true">20140926T194512,13+02</datetime></revised>
+<lastaccessed><datetime dst="true">20140926T194512,14+02</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20140717T231025,76+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
 <wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
@@ -14,9 +14,9 @@
 
 
 
-
-
 <item name="$FileNames" sign="true"><text>_widgetQuickForm.xsp</text></item>
-<item name="$DesignerVersion"><text>8.5</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
 
 </note>

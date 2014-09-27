@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.1" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="20e" sequence="67" unid="0A74B8498185EBC7C1257CBF005D0DBD">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.2" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="20e" sequence="110" unid="0A74B8498185EBC7C1257CBF005D0DBD">
 <created><datetime dst="true">20140419T185623,65+02</datetime></created>
-<modified><datetime dst="true">20140717T231022,18+02</datetime></modified>
-<revised><datetime dst="true">20140711T004224,25+02</datetime></revised>
-<lastaccessed><datetime dst="true">20140717T231022,18+02</datetime></lastaccessed>
+<modified><datetime dst="true">20140926T204345,97+02</datetime></modified>
+<revised><datetime dst="true">20140926T204345,96+02</datetime></revised>
+<lastaccessed><datetime dst="true">20140926T204345,97+02</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20140717T231022,18+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
 <wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
@@ -13,4 +13,4 @@
 
 
 <item name="$FileNames" sign="true"><text>bstheme.theme</text></item>
-<item name="$CSSFiles"><textlist><text>bs3_tweaks.css</text><text>evenx.css</text><text>http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css</text><text>https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css</text><text>long-press-master/css/app.css</text><text>long-press-master/css/normalize.css</text></textlist></item></note>
+<item name="$CSSFiles"><textlist><text>bs3_tweaks.css</text><text>evenx.css</text><text>http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css</text><text>https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css</text><text>long-press-master/css/app.css</text><text>long-press-master/css/normalize.css</text><text>dtpicker/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css</text></textlist></item></note>

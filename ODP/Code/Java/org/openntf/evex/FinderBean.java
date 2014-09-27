@@ -62,7 +62,7 @@ public class FinderBean implements Serializable {
 			// find reservations for period
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 
 		return true;

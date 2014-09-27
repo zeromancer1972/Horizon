@@ -15,12 +15,28 @@ public class Helper {
 		todayStart.set(Calendar.SECOND, 0);
 		return todayStart;
 	}
+	
+	public static Calendar getTodayStartEnd() {
+		Calendar todayStart = Calendar.getInstance();
+		todayStart.set(Calendar.HOUR_OF_DAY, 23);
+		todayStart.set(Calendar.MINUTE, 59);
+		todayStart.set(Calendar.SECOND, 59);
+		return todayStart;
+	}
 
 	public static Calendar getTodayEnd() {
 		Calendar todayEnd = Calendar.getInstance();
 		todayEnd.set(Calendar.HOUR_OF_DAY, 23);
 		todayEnd.set(Calendar.MINUTE, 59);
 		todayEnd.set(Calendar.SECOND, 59);
+		return todayEnd;
+	}
+	
+	public static Calendar getTodayEndBegin() {
+		Calendar todayEnd = Calendar.getInstance();
+		todayEnd.set(Calendar.HOUR_OF_DAY, 0);
+		todayEnd.set(Calendar.MINUTE, 0);
+		todayEnd.set(Calendar.SECOND, 0);
 		return todayEnd;
 	}
 

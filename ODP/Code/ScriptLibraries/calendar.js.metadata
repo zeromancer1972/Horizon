@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.1" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="43e" sequence="38" unid="4733F2ED53DAD93FC1257D10005DEFF7">
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.2" replicaid="C1257D0F003C1A86" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="43e" sequence="39" unid="4733F2ED53DAD93FC1257D10005DEFF7">
 <created><datetime dst="true">20140709T190602,79+02</datetime></created>
-<modified><datetime dst="true">20140717T231022,24+02</datetime></modified>
-<revised><datetime dst="true">20140716T195310,59+02</datetime></revised>
-<lastaccessed><datetime dst="true">20140717T231022,24+02</datetime></lastaccessed>
+<modified><datetime dst="true">20140926T204109,44+02</datetime></modified>
+<revised><datetime dst="true">20140926T204109,43+02</datetime></revised>
+<lastaccessed><datetime dst="true">20140926T204109,44+02</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20140717T231022,24+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Oliver Busse/O=ulcbs</name></updatedby>
 <wassignedby><name>CN=Oliver Busse/O=ulcbs</name></wassignedby>
+<item name="$POID"><datetime dst="true">20140716T195310,59+02</datetime></item>
 <item name="$TITLE" sign="true"><text>calendar.js</text></item>
 <item name="$Flags"><text>h534Q</text></item>
 <item name="$PublicAccess" sign="true"><text>1</text></item>
 <item name="$DesignerVersion"><text>8.5.3</text></item>
-
-<item name="$POID"><datetime dst="true">20140716T195310,59+02</datetime></item></note>
+</note>
