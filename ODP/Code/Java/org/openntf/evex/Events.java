@@ -46,8 +46,8 @@ public class Events {
 		Date from = new Date(lFrom.longValue());
 		Date to = new Date(lTo.longValue());
 
-		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-		String searchString = "SELECT Form=\"event\" & (eventStart => [" + formatter.format(from) + "] | eventStart <= [" + formatter.format(to) + "])";
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy;MM;dd");
+		String searchString = "SELECT Form=\"event\" & (eventStart => @Date(" + formatter.format(from) + ") | eventStart <= @Date(" + formatter.format(to) + "))";
 		DocumentCollection col = XSPUtil.getCurrentDatabase().search(searchString);
 		HashMap valueMap;
 
@@ -93,9 +93,8 @@ public class Events {
 		Date from = Helper.getDateFromTimeStamp(this.from);
 		Date to = Helper.getDateFromTimeStamp(this.to);
 
-		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-
-		String searchString = "SELECT Form=\"reservation\" & resType=\"room\" & (eventStart => [" + formatter.format(from) + "] | eventStart <= [" + formatter.format(to) + "])";
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy;MM;dd");
+		String searchString = "SELECT Form=\"reservation\" & resType=\"room\" & (eventStart => @Date(" + formatter.format(from) + ") | eventStart <= @Date(" + formatter.format(to) + "))";
 
 		DocumentCollection col = XSPUtil.getCurrentDatabase().search(searchString);
 
@@ -137,9 +136,8 @@ public class Events {
 		Date from = Helper.getDateFromTimeStamp(this.from);
 		Date to = Helper.getDateFromTimeStamp(this.to);
 
-		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-
-		String searchString = "SELECT Form=\"reservation\" / resType=\"resource\" & (eventStart => [" + formatter.format(from) + "] | eventStart <= [" + formatter.format(to) + "])";
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy;MM;dd");
+		String searchString = "SELECT Form=\"reservation\" & resType=\"resource\" & (eventStart => @Date(" + formatter.format(from) + ") | eventStart <= @Date(" + formatter.format(to) + "))";
 
 		DocumentCollection col = XSPUtil.getCurrentDatabase().search(searchString);
 
@@ -180,19 +178,38 @@ public class Events {
 		// Search all docs in the range
 
 		Date to = new Date();
-		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy;MM;dd");
+		SimpleDateFormat timeformatter = new SimpleDateFormat("H;m;s");
 
-		String searchString = "SELECT Form=\"event\" & (eventStart <= [" + formatter.format(to) + " 23:59] & eventEnd => [" + formatter.format(to) + " 00:00])";
+		String searchString = "SELECT Form=\"event\" & (eventStart => @Date(" + formatter.format(to) + ";0;0;0) | eventStart <= @Date(" + formatter.format(to) + ";" + timeformatter.format(to) + "))";
+
 		DocumentCollection col = XSPUtil.getCurrentDatabase().search(searchString);
 
-		for (Document doc : col) {
+		try {
 
-			if (doc.getItemValueDateTimeArray("eventStart").size() > 1) {
-				for (int i = 0; i < doc.getItemValueDateTimeArray("eventStart").size(); i++) {
-					DateTime eventStart = (DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(i);
-					DateTime eventEnd = (DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(i);
+			for (Document doc : col) {
 
-					if (eventStart.toJavaDate().after(Helper.getTodayStartDate()) && eventEnd.toJavaDate().before(Helper.getTodayEndDate())) {
+				if (doc.getItemValueDateTimeArray("eventStart").size() > 1) {
+					for (int i = 0; i < doc.getItemValueDateTimeArray("eventStart").size(); i++) {
+						DateTime eventStart = (DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(i);
+						DateTime eventEnd = (DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(i);
+
+						if (eventStart.toJavaDate().after(Helper.getTodayStartDate()) && eventEnd.toJavaDate().before(Helper.getTodayEndDate())) {
+							HashMap valueMap = new HashMap<String, Object>();
+							valueMap.put("title", doc.getItemValueString("eventTitle"));
+							valueMap.put("id", doc.getUniversalID());
+							valueMap.put("class", doc.getItemValueString("eventClass"));
+							valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(0)).toJavaDate().getTime());
+							valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(0)).toJavaDate().getTime());
+							dataMap.add(valueMap);
+						}
+					}
+				} else {
+
+					DateTime eventStart = (DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(0);
+					DateTime eventEnd = (DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(0);
+
+					if (eventStart.toJavaDate().before(Helper.getTodayStartEnd().getTime()) && eventEnd.toJavaDate().after(Helper.getTodayEndBegin().getTime())) {
 						HashMap valueMap = new HashMap<String, Object>();
 						valueMap.put("title", doc.getItemValueString("eventTitle"));
 						valueMap.put("id", doc.getUniversalID());
@@ -200,26 +217,15 @@ public class Events {
 						valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(0)).toJavaDate().getTime());
 						valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(0)).toJavaDate().getTime());
 						dataMap.add(valueMap);
+
 					}
-				}
-			} else {
-
-				DateTime eventStart = (DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(0);
-				DateTime eventEnd = (DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(0);
-
-				if (eventStart.toJavaDate().before(Helper.getTodayStartEnd().getTime()) && eventEnd.toJavaDate().after(Helper.getTodayEndBegin().getTime())) {
-					HashMap valueMap = new HashMap<String, Object>();
-					valueMap.put("title", doc.getItemValueString("eventTitle"));
-					valueMap.put("id", doc.getUniversalID());
-					valueMap.put("class", doc.getItemValueString("eventClass"));
-					valueMap.put("start", ((DateTime) doc.getItemValueDateTimeArray("eventStart").elementAt(0)).toJavaDate().getTime());
-					valueMap.put("end", ((DateTime) doc.getItemValueDateTimeArray("eventEnd").elementAt(0)).toJavaDate().getTime());
-					dataMap.add(valueMap);
 
 				}
-
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+
 		return dataMap;
 	}
 }
